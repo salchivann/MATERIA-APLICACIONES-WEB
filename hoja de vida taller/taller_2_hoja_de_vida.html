@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoja de Vida</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f5fa; 
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+        }
+        .contenedor-principal {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #E7CEED;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(106, 27, 154, 0.1); 
+        }
+        .seccion {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e1bee7; 
+        }
+        h1 {
+            color: #4a148c; 
+            text-align: center;
+        }
+        h2 {
+            color: #6a1b9a; 
+            border-bottom: 2px solid #ab47bc; 
+            padding-bottom: 5px;
+        }
+        .perfil-header {
+            text-align: center;
+        }
+        .foto-perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #8e24aa;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #d1c4e9; 
+            text-align: left;
+            padding: 10px;
+        }
+        th {
+            background-color: #7b1fa2; 
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f3e5f5; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        
+        <!-- datos personales -->
+        <div class="seccion perfil-header">
+            <img src="myface.png" alt="Foto de perfil" class="foto-perfil">
+            <h1>Vanessa Molina</h1>
+            <p><strong>Dirección:</strong> Manta, Ecuador</p>
+            <p><strong>Teléfono:</strong> +593 99 999 9999</p>
+            <p><strong>Correo electrónico:</strong> vane.mol@email.com</p>
+        </div>
+
+        <!-- parte de estudios -->
+        <div class="seccion">
+            <h2>Estudios Realizados</h2>
+            <ul>
+                <li><strong>Ingeniería en Software</strong> - Universidad Laica Eloy Alfaro de Manabí (En curso).</li>
+                <li><strong>Bachillerato General Unificado</strong> - Unidad Educativa Manta (2020 - 2024).</li>
+            </ul>
+        </div>
+
+        <!-- parte de experiencia laboral -->
+        <div class="seccion">
+            <h2>Experiencia Laboral</h2>
+            <ul>
+                <li>
+                    <strong>Desarrollador Web Junior</strong> - Freelance (2025 - Presente)<br>
+                    Diseño y mantenimiento de páginas web estáticas y dinámicas utilizando HTML, CSS y JavaScript básico.
+                </li>
+                <li>
+                    <strong>Asistente de Soporte Técnico</strong> - Soluciones Informáticas Manta (2024 - 2025)<br>
+                    Mantenimiento preventivo y correctivo de equipos de cómputo e instalación de redes locales.
+                </li>
+            </ul>
+        </div>
+
+        <!-- capacitaciones -->
+        <div class="seccion">
+            <h2>Capacitaciones</h2>
+            <ul>
+                <li><strong>Curso de Aplicaciones Web Frontend</strong> - Centro de Capacitación Tecnológica (2025).</li>
+                <li><strong>Seminario de Inteligencia Artificial y Nuevas Tecnologías</strong> - ULEAM (2025).</li>
+                <li><strong>Programa de Italiano (Nivel Intermedio)</strong> - Instituto de Idiomas (2025).</li>
+            </ul>
+        </div>
+
+        <!-- referencias personales -->
+        <div class="seccion">
+            <h2>Referencias Personales</h2>
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cargo / Profesión</th>
+                    <th>Teléfono</th>
+                    <th>Correo electrónico</th>
+                </tr>
+                <tr>
+                    <td>Ing. Carlos Mendoza</td>
+                    <td>Docente Universitario</td>
+                    <td>0987654321</td>
+                    <td>carlos.mendoza@uleam.edu.ec</td>
+                </tr>
+                <tr>
+                    <td>Lic. María Zambrano</td>
+                    <td>Gerente de Proyectos</td>
+                    <td>0991234567</td>
+                    <td>mzambrano@empresa.com</td>
+                </tr>
+                <tr>
+                    <td>Ing. Roberto Alcívar</td>
+                    <td>Desarrollador Senior</td>
+                    <td>0978912345</td>
+                    <td>roberto.alcivar@dev.net</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>
