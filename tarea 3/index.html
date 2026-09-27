@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 con JavaScript</title>
+
+    <style>
+        .error {
+            color: rgba(255, 2, 2, 0.817);
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h2>Ingresar los siguientes datos:</h2>
+        <br>
+
+        <label for="cedula">Cedula</label><br>
+        <input type="text" id="cedula" name="cedula">
+        <span id="errorCedula" class="error"></span>
+        <br><br>
+
+        <label for="nombre">Nombre</label><br>
+        <input type="text" id="nombre" name="nombre">
+        <span id="errorNombre" class="error"></span>
+        <br><br>
+
+        <label for="direccion">Dirección</label><br>
+        <input type="text" id="direccion" name="direccion">
+        <span id="errorDireccion" class="error"></span>
+        <br><br>
+
+        <label for="telefono">Teléfono Celular</label><br>
+        <input type="tel" id="telefono" name="telefono">
+        <span id="errorTelefono" class="error"></span>
+        <br><br>
+
+        <label for="correo">Correo Electrónico</label><br>
+        <input type="email" id="correo" name="correo">
+        <span id="errorCorreo" class="error"></span>
+        <br><br>
+
+        <button type="button" onclick="validarFormulario()">Enviar / Validar</button>
+
+    </form>
+
+    <script src="validaciones.js"></script>
+</body>
+</html>
