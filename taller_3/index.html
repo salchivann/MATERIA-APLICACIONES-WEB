@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 3, Bucle de 5 iteraciones</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .error {
+            color: rgba(255, 2, 2, 0.817);
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <h2>Ingresar 2 números:</h2>
+        <br>
+
+        <label for="numero1">Número 1:</label><br>
+        <input type="number" id="numero1" name="numero1">
+        <span id="errorNumero1" class="error"></span>
+        <br><br>
+
+        <label for="numero2">Número 2:</label><br>
+        <input type="number" id="numero2" name="numero2">
+        <span id="errorNumero2" class="error"></span>
+        <br><br>
+
+        <button type="button" onclick="validar()">Enviar</button>
+    </form>
+
+    <div id="resultados"></div>
+
+    <script src="taller_3.js"></script>
+</body>
+</html>
