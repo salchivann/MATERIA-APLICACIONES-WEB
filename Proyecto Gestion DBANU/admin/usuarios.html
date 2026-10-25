@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuarios</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<div class="app">
+  <div class="contenido">
+    <div class="caja">
+      <h1>Usuarios</h1>
+      <div class="tarjeta">
+        <h2 id="tit">Agregar</h2>
+        <form id="f" novalidate>
+          <input type="hidden" id="edit" value="">
+          <div class="campo"><label>Rol</label><select id="rol"><option value="alumno">Alumno</option><option value="pro">Profesional</option></select></div>
+          <div class="campo" id="campo-area" style="display:none">
+            <label>Área</label>
+            <select id="area"></select>
+            <p style="color:var(--gris);font-size:.8rem;margin:6px 0 0">
+              Los servicios de esta área quedarán a cargo del profesional.
+            </p>
+          </div>
+          <div class="campo"><label>Nombre</label><input id="nom"></div>
+          <div class="campo"><label>Correo</label><input id="mail"></div>
+          <div class="campo"><label>Usuario</label><input id="user"></div>
+          <div class="campo"><label>Clave</label><input id="pass"></div>
+          <div style="display:flex;gap:6px"><button>Guardar</button><button type="button" class="btn-gris" id="limpiar">Limpiar</button></div>
+        </form>
+      </div>
+      <p class="error-formulario" id="error-formulario"></p>
+      <div class="tarjeta">
+        <h2>Lista</h2>
+        <div class="fila-campos">
+          <div class="campo">
+            <label>Rol</label>
+            <select id="f-rol">
+              <option value="">Todos</option>
+              <option value="alumno">Alumnos</option>
+              <option value="pro">Profesionales</option>
+              <option value="admin">Administrador</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label>Área</label>
+            <select id="f-area"><option value="">Todas</option></select>
+          </div>
+          <div class="campo">
+            <label>Buscar</label>
+            <input id="buscar" placeholder="Nombre o cédula">
+          </div>
+        </div>
+        <div class="tabla"><table>
+          <thead><tr><th>Nombre</th><th>Rol</th><th>Área</th><th>Cédula</th><th>Correo</th><th>Usuario</th><th></th></tr></thead>
+          <tbody id="body"></tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../js/datos.js"></script>
+<script src="../js/admin/usuarios.js"></script>
+</body>
+</html>

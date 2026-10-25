@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Becas</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<div class="app">
+  <div class="contenido">
+    <div class="caja">
+      <h1>Becas</h1>
+      <div class="tarjeta">
+        <h2>Disponibles</h2>
+        <div id="lista"></div>
+      </div>
+      <div class="tarjeta">
+        <h2>Mis postulaciones</h2>
+        <div id="mis"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ventana para postular a una beca -->
+<div class="modal" id="modal-postular" role="dialog" aria-modal="true" aria-labelledby="titulo-postular">
+  <div class="modal-caja">
+    <div class="modal-cabecera">
+      <h2 id="titulo-postular">Postular a la beca</h2>
+      <button type="button" class="modal-cerrar" onclick="cerrarPostulacion()" aria-label="Cerrar">&times;</button>
+    </div>
+
+    <form id="f-postular" novalidate>
+      <div class="modal-cuerpo">
+        <div class="beca-info">
+          <div class="beca-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 21h8"></path>
+              <path d="M12 17v4"></path>
+              <path d="M7 4h10v4a5 5 0 0 1-10 0V4z"></path>
+              <path d="M7 6H4a3 3 0 0 0 3 3"></path>
+              <path d="M17 6h3a3 3 0 0 1-3 3"></path>
+            </svg>
+          </div>
+          <div>
+            <strong id="m-beca-nombre"></strong>
+            <p id="m-beca-detalle"></p>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="m-motivo">Motivo de tu postulación *</label>
+          <textarea id="m-motivo" rows="3" placeholder="Explica brevemente por qué solicitas esta beca..."></textarea>
+          <small id="e-motivo"></small>
+        </div>
+
+        <div class="campo">
+          <label>Documentos que adjuntas *</label>
+          <label class="doc">
+            <input type="checkbox" class="doc-check" value="Promedio general igual o superior a 9.0/10">
+            <span>Promedio general igual o superior a 9.0/10</span>
+          </label>
+          <label class="doc">
+            <input type="checkbox" class="doc-check" value="Estar matriculado en el periodo vigente">
+            <span>Estar matriculado en el periodo vigente</span>
+          </label>
+          <label class="doc">
+            <input type="checkbox" class="doc-check" value="No tener sanciones disciplinarias">
+            <span>No tener sanciones disciplinarias</span>
+          </label>
+          <label class="doc">
+            <input type="checkbox" class="doc-check" value="Carta de motivación">
+            <span>Carta de motivación</span>
+          </label>
+          <small id="e-docs"></small>
+        </div>
+      </div>
+
+      <div class="modal-pie">
+        <button type="button" class="btn-gris" onclick="cerrarPostulacion()">Cancelar</button>
+        <button type="submit">Enviar postulación</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="../js/datos.js"></script>
+<script src="../js/estudiante/becas.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<div class="app">
+  <div class="contenido">
+    <div class="caja">
+      <h1>Servicios</h1>
+      <div class="tarjeta">
+        <h2 id="tit">Agregar</h2>
+        <form id="f" novalidate>
+          <input type="hidden" id="edit" value="">
+          <div class="campo"><label>Nombre</label><input id="nom"></div>
+          <div class="campo"><label>Profesional</label><select id="pro"></select></div>
+          <div style="display:flex;gap:6px"><button>Guardar</button><button type="button" class="btn-gris" id="limpiar">Limpiar</button></div>
+        </form>
+      </div>
+      <p class="error-formulario" id="error-formulario"></p>
+      <div class="tarjeta">
+        <h2>Lista</h2>
+        <div class="tabla"><table>
+          <thead><tr><th>Servicio</th><th>Encargado</th><th>Citas</th><th></th></tr></thead>
+          <tbody id="body"></tbody>
+        </table></div>
+      </div>
+      <p class="error-formulario" id="error-lista"></p>
+    </div>
+  </div>
+</div>
+<script src="../js/datos.js"></script>
+<script src="../js/admin/servicios.js"></script>
+</body>
+</html>

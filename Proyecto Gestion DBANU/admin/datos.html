@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<div class="app">
+  <div class="contenido">
+    <div class="caja">
+      <h1>Datos</h1>
+      <p style="color:var(--gris);margin:0 0 10px">
+        Los datos se guardan automáticamente en este navegador. Descarga un respaldo
+        para pasarlos a otra computadora o para no perderlos.
+      </p>
+
+      <div class="resumen" id="res"></div>
+
+      <div class="tarjeta">
+        <h2>Descargar respaldo</h2>
+        <p>Guarda un archivo JSON con alumnos, profesionales, cuentas, citas y mensajes.</p>
+        <button id="bajar">Descargar JSON</button>
+      </div>
+
+      <div class="tarjeta">
+        <h2>Cargar respaldo</h2>
+        <p>Selecciona un archivo JSON descargado antes. Reemplaza los datos actuales.</p>
+        <div class="campo">
+          <label>Archivo JSON</label>
+          <input type="file" id="archivo" accept=".json,application/json">
+        </div>
+        <p class="vacio" id="estado"></p>
+      </div>
+      <p class="error-formulario" id="error-datos"></p>
+
+      <div class="tarjeta">
+        <h2>Crear usuarios</h2>
+        <p>
+          Para crear una cuenta con la que se pueda entrar, usa la opción
+          <a href="usuarios.html">Usuarios</a> del menú.
+        </p>
+      </div>
+
+      <div class="tarjeta">
+        <h2>Restablecer</h2>
+        <p>Vuelve a los datos de ejemplo. Se borran los usuarios y citas creados.</p>
+        <button class="btn-rojo" id="reset">Restablecer datos</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../js/datos.js"></script>
+<script src="../js/admin/datos.js"></script>
+</body>
+</html>
