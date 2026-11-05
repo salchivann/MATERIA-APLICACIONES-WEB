@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Estudiantes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Registro de Estudiantes</h1>
+
+    <form id="form" novalidate>
+
+      <div class="field">
+        <label>Cédula</label>
+        <input type="text" id="cedula" placeholder="Ej: 1712345678" maxlength="10">
+        <span class="error" id="cedula-error">Ingrese exactamente 10 dígitos.</span>
+      </div>
+
+      <div class="field">
+        <label>Apellidos</label>
+        <input type="text" id="apellidos" placeholder="Ej: García López">
+        <span class="error">Ingrese 3 o más letras o espacios.</span>
+      </div>
+
+      <div class="field">
+        <label>Nombres</label>
+        <input type="text" id="nombres" placeholder="Ej: Juan Carlos">
+        <span class="error">Ingrese 3 o más letras o espacios.</span>
+      </div>
+
+      <div class="field">
+        <label>Teléfono</label>
+        <input type="text" id="telefono" placeholder="Ej: 0991234567" maxlength="10">
+        <span class="error">Ingrese exactamente 10 dígitos, debe iniciar con 09 o 02.</span>
+      </div>
+
+      <div class="field full">
+        <label>Dirección</label>
+        <input type="text" id="direccion" placeholder="Ej: Av. Principal 123">
+        <span class="error">Ingrese 5 o más caracteres.</span>
+      </div>
+
+      <div class="field full">
+        <label>Correo Electrónico</label>
+        <input type="email" id="correo" placeholder="Ej: juan@gmail.com">
+        <span class="error" id="correo-error">Este campo es requerido.</span>
+      </div>
+
+      <div class="field">
+        <label>Facultad</label>
+        <select id="facultad">
+          <option value="">-- Seleccione --</option>
+          <option>Ingeniería</option>
+          <option>Ciencias de la Educación</option>
+          <option>Medicina</option>
+          <option>Derecho</option>
+          <option>Administración</option>
+          <option>Arquitectura</option>
+        </select>
+        <span class="error">Seleccione una facultad.</span>
+      </div>
+
+      <div class="field">
+        <label>Nivel</label>
+        <select id="nivel">
+          <option value="">-- Seleccione --</option>
+          <option>1ro</option>
+          <option>2do</option>
+          <option>3ro</option>
+          <option>4to</option>
+          <option>5to</option>
+          <option>6to</option>
+          <option>7mo</option>
+          <option>8vo</option>
+          <option>9no</option>
+          <option>10mo</option>
+        </select>
+        <span class="error">Seleccione un nivel.</span>
+      </div>
+
+      <div class="field">
+        <label>Paralelo</label>
+        <select id="paralelo">
+          <option value="">-- Seleccione --</option>
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+        </select>
+        <span class="error">Seleccione un paralelo.</span>
+      </div>
+
+      <div id="msg"></div>
+
+      <div class="btn-row">
+        <button type="button" class="btn-clear" onclick="clearForm()">Limpiar</button>
+        <button type="submit" class="btn-save">Guardar</button>
+      </div>
+
+    </form>
+
+    <table id="tabla">
+      <thead>
+        <tr>
+          <th>Cédula</th>
+          <th>Apellidos</th>
+          <th>Nombres</th>
+          <th>Teléfono</th>
+          <th>Correo</th>
+          <th>Facultad</th>
+          <th>Nivel</th>
+          <th>Paralelo</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
