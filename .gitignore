@@ -1,14 +1,14 @@
 # Dependencias de Node.js
-node_modules/
+**/node_modules/
 
 # Archivos de build
-dist/
-build/
-.output/
-.svelte-kit/
+**/dist/
+**/build/
+**/.output/
+**/.svelte-kit/
 
 # Archivos de caché de Angular
-.angular/
+**/.angular/
 
 # Variables de entorno
 .env
@@ -24,7 +24,3 @@ yarn-error.log*
 # Archivos del sistema operativo
 .DS_Store
 Thumbs.db
-
-# Editor
-.vscode/
-.idea/
