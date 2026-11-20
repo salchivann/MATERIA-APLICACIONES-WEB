@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacientes</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<div class="app">
+  <div class="contenido">
+    <div class="caja">
+      <h1>Pacientes</h1>
+
+      <div class="tarjeta">
+        <h2>Agregar paciente</h2>
+        <form id="f" novalidate>
+          <div class="fila-campos">
+            <div class="campo">
+              <label>Nombre completo</label>
+              <input id="nom">
+            </div>
+            <div class="campo">
+              <label>Cédula</label>
+              <input id="ced">
+            </div>
+            <div class="campo">
+              <label>Carrera</label>
+              <input id="car">
+            </div>
+            <div class="campo">
+              <label>Semestre</label>
+              <select id="sem">
+                <option>1er</option>
+                <option>2do</option>
+                <option>3er</option>
+                <option>4to</option>
+                <option>5to</option>
+                <option>6to</option>
+                <option>7mo</option>
+                <option>8vo</option>
+                <option>9no</option>
+                <option>10mo</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label>Correo</label>
+              <input id="mail">
+            </div>
+            <div class="campo">
+              <label>Teléfono</label>
+              <input id="tel">
+            </div>
+          </div>
+          <button>Agregar paciente</button>
+        </form>
+      </div>
+
+      <div class="tarjeta">
+        <h2>Lista de pacientes</h2>
+        <div class="campo filtros">
+          <label>Buscar</label>
+          <input id="buscar" placeholder="Nombre o cédula">
+        </div>
+        <div class="tabla"><table>
+          <thead><tr><th>Paciente</th><th>Cédula</th><th>Carrera</th><th>Correo</th><th>Tel</th><th>Citas</th><th>Última</th></tr></thead>
+          <tbody id="body"></tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../js/datos.js"></script>
+<script src="../js/profesional/pacientes.js"></script>
+</body>
+</html>

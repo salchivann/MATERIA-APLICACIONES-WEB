@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - DBANU</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="login">
+    <div class="logo-caja">
+      <img src="img/logo.png" alt="logo">
+    </div>
+    <h1>DBANU</h1>
+    <p class="sub">Bienestar Estudiantil</p>
+    <form id="f">
+      <div class="campo">
+        <label>Usuario</label>
+        <input id="u">
+        <small id="e-u"></small>
+      </div>
+      <div class="campo">
+        <label>Clave</label>
+        <input type="password" id="p">
+        <small id="e-p"></small>
+      </div>
+      <button style="width:100%">Entrar</button>
+    </form>
+    <div class="login-bot">
+      <button class="btn-gris" data-d="alumno">Alumno</button>
+      <button class="btn-gris" data-d="pro">Pro</button>
+      <button class="btn-gris" data-d="admin">Admin</button>
+    </div>
+  </div>
+  <script src="js/datos.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

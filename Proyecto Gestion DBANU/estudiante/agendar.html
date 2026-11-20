@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<div class="app">
+  <div class="contenido">
+    <div class="caja">
+      <h1>Agendar cita</h1>
+      <form class="tarjeta" id="f" novalidate>
+        <div class="campo">
+          <label>Servicio</label>
+          <select id="ser"><option value="">Elige...</option></select>
+          <small id="e-ser"></small>
+        </div>
+        <div class="campo">
+          <label>Fecha</label>
+          <input type="date" id="fec">
+          <small id="e-fec"></small>
+        </div>
+        <div class="campo">
+          <label>Hora</label>
+          <select id="hor"><option value="">Elige...</option></select>
+          <small id="e-hor"></small>
+        </div>
+        <div class="campo">
+          <label>Motivo</label>
+          <textarea id="mot" rows="3"></textarea>
+          <small id="e-mot"></small>
+        </div>
+        <button>Confirmar</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="../js/datos.js"></script>
+<script src="../js/estudiante/agendar.js"></script>
+</body>
+</html>

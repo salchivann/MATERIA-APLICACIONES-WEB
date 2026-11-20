@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registros</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<div class="app">
+  <div class="contenido">
+    <div class="caja">
+      <h1>Registros</h1>
+      <div class="resumen" id="res"></div>
+      <div class="tarjeta">
+        <div class="fila-campos filtros">
+          <div class="campo">
+            <label>Estado</label>
+            <select id="f">
+              <option value="">Todos</option>
+              <option>Pendiente</option>
+              <option>Atendida</option>
+              <option>Cancelada</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label>Servicio</label>
+            <select id="s"><option value="">Todos</option></select>
+          </div>
+        </div>
+        <div class="tabla"><table>
+          <thead><tr><th>Fecha</th><th>Hora</th><th>Alumno</th><th>Servicio</th><th>Pro</th><th>Estado</th></tr></thead>
+          <tbody id="body"></tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../js/datos.js"></script>
+<script src="../js/admin/registros.js"></script>
+</body>
+</html>

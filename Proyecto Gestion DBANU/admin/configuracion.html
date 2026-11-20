@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración avanzada</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<div class="app">
+  <div class="contenido">
+    <div class="caja">
+      <h1>Configuración avanzada</h1>
+      <p class="texto-mini">Opciones generales para administrar el funcionamiento del sistema DBANU.</p>
+
+      <div class="nota-demo">
+        <strong>Vista preliminar</strong>
+        <p>Esta sección muestra las opciones que tendría un administrador. Por ahora los cambios no se guardan.</p>
+      </div>
+
+      <form id="config">
+        <div class="tarjeta">
+          <h2>Datos de la institución</h2>
+          <div class="fila-campos">
+            <div class="campo">
+              <label>Nombre de la institución</label>
+              <input value="DBANU - ULEAM">
+            </div>
+            <div class="campo">
+              <label>Correo de contacto</label>
+              <input type="email" value="bienestar@uleam.edu.ec">
+            </div>
+            <div class="campo">
+              <label>Teléfono</label>
+              <input value="(05) 262-0000">
+            </div>
+            <div class="campo">
+              <label>Horario de atención</label>
+              <input value="Lunes a viernes, 08:00 - 17:00">
+            </div>
+          </div>
+        </div>
+
+        <div class="tarjeta">
+          <h2>Apariencia</h2>
+          <div class="fila-campos">
+            <div class="campo">
+              <label>Color principal</label>
+              <input type="color" value="#2563eb">
+            </div>
+            <div class="campo">
+              <label>Tema del panel</label>
+              <select>
+                <option>Claro</option>
+                <option>Oscuro</option>
+                <option>Automático</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label>Logo institucional</label>
+              <input type="file" disabled>
+            </div>
+          </div>
+          <div class="fila-opciones">
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Mostrar logo en la pantalla de inicio</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="tarjeta">
+          <h2>Citas y agenda</h2>
+          <div class="fila-campos">
+            <div class="campo">
+              <label>Duración de la cita (minutos)</label>
+              <select>
+                <option>30</option>
+                <option selected>45</option>
+                <option>60</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label>Días mínimos de anticipación</label>
+              <input type="number" value="1">
+            </div>
+            <div class="campo">
+              <label>Límite de citas por estudiante al mes</label>
+              <input type="number" value="4">
+            </div>
+            <div class="campo">
+              <label>Cancelación mínima (horas)</label>
+              <input type="number" value="24">
+            </div>
+          </div>
+          <div class="fila-opciones">
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Permitir agendar los fines de semana</span>
+            </label>
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Permitir reprogramar citas</span>
+            </label>
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Enviar recordatorio un día antes</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="tarjeta">
+          <h2>Becas y nivelación</h2>
+          <div class="fila-campos">
+            <div class="campo">
+              <label>Periodo académico activo</label>
+              <select>
+                <option>2026-1</option>
+                <option selected>2026-2</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label>Nota mínima para beca</label>
+              <input type="number" step="0.1" value="9.0">
+            </div>
+            <div class="campo">
+              <label>Nota mínima aprobatoria</label>
+              <input type="number" step="0.1" value="7.0">
+            </div>
+            <div class="campo">
+              <label>Cupos por defecto por beca</label>
+              <input type="number" value="5">
+            </div>
+          </div>
+          <div class="fila-opciones">
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Exigir todos los documentos en la postulación</span>
+            </label>
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Notificar resultados de becas</span>
+            </label>
+            <label class="interruptor">
+              <input type="checkbox">
+              <span class="interruptor-pista"></span>
+              <span>Permitir postulaciones fuera del periodo</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="tarjeta">
+          <h2>Notificaciones y mensajería</h2>
+          <div class="fila-campos">
+            <div class="campo">
+              <label>Remitente de correos</label>
+              <input value="no-reply@uleam.edu.ec">
+            </div>
+            <div class="campo">
+              <label>Asunto de recordatorio</label>
+              <input value="Recordatorio de tu cita DBANU">
+            </div>
+          </div>
+          <div class="fila-opciones">
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Notificaciones por correo</span>
+            </label>
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Avisos de nuevas postulaciones</span>
+            </label>
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Avisos de nuevos mensajes</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="tarjeta">
+          <h2>Seguridad y accesos</h2>
+          <div class="fila-campos">
+            <div class="campo">
+              <label>Longitud mínima de contraseña</label>
+              <input type="number" value="8">
+            </div>
+            <div class="campo">
+              <label>Intentos fallidos antes de bloquear</label>
+              <input type="number" value="5">
+            </div>
+            <div class="campo">
+              <label>Cierre de sesión por inactividad</label>
+              <select>
+                <option>15 minutos</option>
+                <option selected>30 minutos</option>
+                <option>60 minutos</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label>Doble factor de autenticación</label>
+              <select>
+                <option>Desactivado</option>
+                <option>Opcional</option>
+                <option>Obligatorio para administradores</option>
+              </select>
+            </div>
+          </div>
+          <div class="fila-opciones">
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Exigir mayúsculas y números</span>
+            </label>
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Registrar actividad de usuarios</span>
+            </label>
+            <label class="interruptor">
+              <input type="checkbox">
+              <span class="interruptor-pista"></span>
+              <span>Bloquear cuentas inactivas</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="tarjeta">
+          <h2>Respaldos y mantenimiento</h2>
+          <div class="fila-campos">
+            <div class="campo">
+              <label>Frecuencia de respaldo</label>
+              <select>
+                <option>Diario</option>
+                <option selected>Semanal</option>
+                <option>Mensual</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label>Retención de respaldos</label>
+              <select>
+                <option>30 días</option>
+                <option selected>90 días</option>
+                <option>1 año</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label>Modo mantenimiento</label>
+              <select>
+                <option>Desactivado</option>
+                <option>Programado</option>
+                <option>Activo</option>
+              </select>
+            </div>
+          </div>
+          <div class="fila-opciones">
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Respaldo automático</span>
+            </label>
+            <label class="interruptor">
+              <input type="checkbox">
+              <span class="interruptor-pista"></span>
+              <span>Notificar si falla un respaldo</span>
+            </label>
+          </div>
+          <p class="texto-mini">Los respaldos manuales están disponibles en <a href="datos.html">Datos</a>.</p>
+        </div>
+
+        <div class="tarjeta">
+          <h2>Integraciones</h2>
+          <div class="fila-campos">
+            <div class="campo">
+              <label>Servidor de correo</label>
+              <input value="smtp.uleam.edu.ec">
+            </div>
+            <div class="campo">
+              <label>Puerto</label>
+              <input value="587">
+            </div>
+            <div class="campo">
+              <label>Usuario SMTP</label>
+              <input value="notificaciones@uleam.edu.ec">
+            </div>
+            <div class="campo">
+              <label>API de calendario</label>
+              <input value="No configurada">
+            </div>
+          </div>
+          <div class="fila-opciones">
+            <label class="interruptor">
+              <input type="checkbox" checked>
+              <span class="interruptor-pista"></span>
+              <span>Sincronizar citas con Google Calendar</span>
+            </label>
+            <label class="interruptor">
+              <input type="checkbox">
+              <span class="interruptor-pista"></span>
+              <span>Enviar mensajes por WhatsApp</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="tarjeta">
+          <h2>Roles y permisos</h2>
+          <p class="texto-mini">Resumen de los accesos definidos para cada tipo de usuario.</p>
+          <div class="tabla"><table>
+            <thead><tr><th>Módulo</th><th>Estudiante</th><th>Profesional</th><th>Administrador</th></tr></thead>
+            <tbody>
+              <tr><td>Citas</td><td>Agendar y ver las propias</td><td>Gestionar sus citas</td><td>Ver todas</td></tr>
+              <tr><td>Becas</td><td>Postular y ver estado</td><td>-</td><td>Crear, revisar y aprobar</td></tr>
+              <tr><td>Pacientes</td><td>-</td><td>Ver y agregar</td><td>Ver todos</td></tr>
+              <tr><td>Usuarios</td><td>-</td><td>-</td><td>Crear, editar y eliminar</td></tr>
+              <tr><td>Configuración</td><td>-</td><td>-</td><td>Acceso total</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+
+        <div class="tarjeta acciones-config">
+          <button type="button" class="btn-gris" onclick="location.reload()">Restablecer</button>
+          <button type="submit">Guardar cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="../js/datos.js"></script>
+<script src="../js/admin/configuracion.js"></script>
+</body>
+</html>
